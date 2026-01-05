@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dismas Wanyala - Full-Stack Developer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+        /* Style for sections that fade in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom Accent Color */
+        .text-accent { color: #2dd4bf; } /* teal-400 */
+        .bg-accent { background-color: #14b8a6; } /* teal-500 */
+        .hover\:bg-accent-dark:hover { background-color: #0d9488; } /* teal-600 */
+        .border-accent { border-color: #2dd4bf; } /* teal-400 */
+        .ring-accent:focus { ring-color: #14b8a6; } /* teal-500 */
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-accent">DW.</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-accent transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-accent transition-colors duration-300">Skills</a>
+                <a href="#projects" class="hover:text-accent transition-colors duration-300">Projects</a>
+                <a href="#contact" class="hover:text-accent transition-colors duration-300">Contact</a>
+            </div>
+            <a href="/path/to/your-resume.pdf" target="_blank" class="hidden md:block bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">
+                Resume
+            </a>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <section id="home" class="min-h-screen flex flex-col justify-center items-start pt-20">
+            <div class="fade-in-section">
+                <p class="text-lg text-accent mb-2">Hi, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-100 mb-4">Dismas</h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-400 mb-6">I build for the web and mobile.</h2>
+                <p class="max-w-xl text-gray-400 mb-8">
+                    I'm a full-stack developer specializing in creating exceptional digital experiences. I enjoy working across the stack, from robust back-end systems to intuitive mobile applications.
+                </p>
+                <a href="#contact" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 fade-in-section">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">
+                <span class="text-accent">01.</span> About Me
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div class="md:w-2/3 text-gray-400 space-y-4 text-lg">
+                    <p>Hello! I'm a developer whose passion for technology started with a simple "Hello, World!" and has grown into a career of building complex applications. I thrive on solving problems and bringing ideas to life through code.</p>
+                    <p>My expertise covers the full development lifecycle, from back-end logic with **Java/Spring Boot** and **PHP** to dynamic front-ends and mobile apps using **React Native** and **Kotlin**. I'm always eager to learn new technologies and improve my craft.</p>
+                </div>
+                <div class="md:w-1/3 flex justify-center mt-8 md:mt-0">
+                    <div class="w-64 h-64 rounded-full bg-gray-800 border-4 border-accent shadow-lg overflow-hidden">
+                        <img src="Wanyala.jpeg" alt="Dismas Wanyala" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 fade-in-section">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">
+                <span class="text-accent">02.</span> My Skills
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">Java & Spring Boot</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">Kotlin & React Native</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">Python</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">PHP</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">JavaScript & jQuery</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">HTML5 & CSS3</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">AJAX</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">SQL & Databases</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">C</p></div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"><p class="font-semibold">Git & GitHub</p></div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 fade-in-section">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">
+                <span class="text-accent">03.</span> My Projects
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=800" alt="Project 1" class="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-accent mb-2">E-commerce API</h3>
+                        <p class="text-gray-400 mb-4">A RESTful API for an e-commerce platform, built with Spring Boot. Features JWT authentication, product management, and order processing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Java, Spring Boot</span>
+                            <div>
+                                <a href="#" class="text-gray-400 hover:text-accent mr-4">GitHub</a>
+                                <a href="#" class="text-gray-400 hover:text-accent">Live</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800" alt="Project 2" class="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-accent mb-2">Logistics Mobile App</h3>
+                        <p class="text-gray-400 mb-4">A cross-platform app for delivery tracking, built with React Native. Features real-time GPS tracking and a Kotlin-based native module for performance.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">React Native, Kotlin</span>
+                            <div>
+                                <a href="#" class="text-gray-400 hover:text-accent mr-4">GitHub</a>
+                                <a href="#" class="text-gray-400 hover:text-accent">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800" alt="Project 3" class="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-accent mb-2">Data Visualization Dashboard</h3>
+                        <p class="text-gray-400 mb-4">A modern front-end for a legacy PHP backend, using vanilla JavaScript and AJAX to fetch and display data dynamically with Chart.js.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">PHP, JavaScript, AJAX</span>
+                            <div>
+                                <a href="https://play.google.com/store/apps/details?id=com.st11.eventmarker" class="text-gray-400 hover:text-accent mr-4">GitHub</a>
+                                <a href="#" class="text-gray-400 hover:text-accent">Live</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects" class="py-24 fade-in-section">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">
+        <span class="text-accent">03.</span> Featured Work
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-accent group">
+            <div class="relative overflow-hidden">
+                <img src="clientdetail.jpg" alt="my debt app" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold text-white">My Debt Mobile App</h3>
+                    <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">2025</span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                 A Simple And Intuitive Utility app for Business, 
+This is a debt management system that you can use in your business to keep record of people you lend money to of give them goods on credit
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[10px] uppercase tracking-wider bg-gray-900 text-gray-300 px-2 py-1 rounded">Kotlin</span>
+                    <!-- <span class="text-[10px] uppercase tracking-wider bg-gray-900 text-gray-300 px-2 py-1 rounded">Node.js</span>
+                    <span class="text-[10px] uppercase tracking-wider bg-gray-900 text-gray-300 px-2 py-1 rounded">PostgreSQL</span> -->
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://github.com/Dismas-Ospaltic" class="text-gray-400 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://github.com/Dismas-Ospaltic/Debt-Management-Mobile" class="text-accent hover:underline text-sm font-semibold">View Project →</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+               <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-accent group">
+            <div class="relative overflow-hidden">
+                <img src="expiry.jpg" alt="expiry monitor App" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold text-white">Expiry Monitor Mobile App</h3>
+                    <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">2025</span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                 A Simple And Intuitive Utility app for Business and Personal Use, 
+This is an expiry date monitoring system that you can use in your business or personal life to keep track of expiry dates of products and items. have a notification system that will alert you before an item expires
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[10px] uppercase tracking-wider bg-gray-900 text-gray-300 px-2 py-1 rounded">Kotlin</span>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://github.com/Dismas-Ospaltic" class="text-gray-400 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://github.com/Dismas-Ospaltic/Expiry-Monitor" class="text-accent hover:underline text-sm font-semibold">View Project →</a>
+                </div>
+            </div>
+        </div>
+
+
+
+               <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-accent group">
+            <div class="relative overflow-hidden">
+                <img src="sales.png" alt="Sales App" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-xl font-bold text-white">Sales Note Mobile App</h3>
+                    <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">2025</span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                 A Simple And Intuitive Utility app for Business, 
+This can be used in small scale business to keep record of sales made daily, weekly and monthly.
+ it also has a feature to generate sales reports based on the records.Each 
+Sale can be recorded with payment method used and A short description of the item sold.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[10px] uppercase tracking-wider bg-gray-900 text-gray-300 px-2 py-1 rounded">Kotlin</span>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://github.com/Dismas-Ospaltic" class="text-gray-400 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://github.com/Dismas-Ospaltic/SalesNote" class="text-accent hover:underline text-sm font-semibold">View Project →</a>
+                </div>
+            </div>
+        </div>
+
+        
+
+        </div>
+</section>
+
+        <section id="contact" class="py-24 text-center fade-in-section">
+             <h2 class="text-4xl font-bold mb-4 text-gray-100">
+                <span class="text-accent">04.</span> Get In Touch
+            </h2>
+            <p class="max-w-md mx-auto text-gray-400 mb-8">
+                I'm currently open to new opportunities and collaborations. My inbox is always open, so feel free to reach out!
+            </p>
+             <form id="contactForm" class="max-w-xl mx-auto">   <!-- action="YOUR_FORM_ENDPOINT" method="POST"-->
+                <div class="flex flex-col md:flex-row gap-4 mb-4">
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 ring-accent" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 ring-accent" required>
+                </div>
+                <textarea name="message" id="message" rows="5" placeholder="Your Message" class="w-full p-3 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 ring-accent" required></textarea>
+                <button type="submit" class="mt-6 bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300">
+                    Send Message
+                </button>
+            </form>
+            <p id="form-status" class="mt-4 text-accent"></p>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 border-t border-gray-800">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://github.com/Dismas-Ospaltic" target="_blank" class="hover:text-accent transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/dismas-kizai-b7b254368/" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a>
+            <a href="https://wa.me/+254742354784" target="_blank" class="hover:text-accent transition-colors">WhatsApp</a>
+        </div>
+        <p>Designed & Built by Dismas Wanyala</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Smooth scroll for navigation links ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // --- Intersection Observer for fade-in animations ---
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // // --- Simple Contact Form Handler (optional, for front-end feedback) ---
+            // const contactForm = document.getElementById('contactForm');
+            // const formStatus = document.getElementById('form-status');
+            
+            // contactForm.addEventListener('submit', function(e) {
+            //     // Prevent the default form submission to show a custom message.
+            //     // In a real scenario, the form 'action' attribute would point to your backend.
+            //     e.preventDefault();
+                
+            //     formStatus.textContent = 'Sending...';
+
+            //     // Simulate a network request.
+            //     setTimeout(() => {
+            //         formStatus.textContent = 'Thank you for your message!';
+            //         contactForm.reset();
+            //         setTimeout(() => { formStatus.textContent = ''; }, 5000);
+            //     }, 1000);
+            // });
+
+
+
+            /* =============================
+   EMAILJS INITIALIZATION
+============================= */
+(function () {
+    emailjs.init("n17-PLPzDH9Mm0IT6"); // 🔴 PUT YOUR PUBLIC KEY HERE
+})();
+
+/* =============================
+   FORM VALIDATION + SEND
+============================= */
+const form = document.getElementById("contactForm");
+const status = document.getElementById("form-status");
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    status.textContent = "";
+    status.className = "";
+
+    // 🔐 VALIDATION
+    if (name.length < 2) {
+        status.textContent = "Please enter your name.";
+        status.classList.add("error");
+        return;
+    }
+
+    if (!isValidEmail(email)) {
+        status.textContent = "Please enter a valid email address.";
+        status.classList.add("error");
+        return;
+    }
+
+    if (message.length < 10) {
+        status.textContent = "Message must be at least 10 characters.";
+        status.classList.add("error");
+        return;
+    }
+
+    // ⏳ SENDING
+    status.textContent = "Sending message...";
+    status.classList.remove("error");
+
+    emailjs.send(
+        "service_bebonpx",   // 🔴 PUT SERVICE ID
+        "template_qj5dcye",  // 🔴 PUT TEMPLATE ID
+        {
+            name: name,
+            email: email,
+            message: message,
+        }
+    ).then(
+        function () {
+            status.textContent = "Message sent successfully ✅";
+            status.classList.add("success");
+            form.reset();
+        },
+        function (error) {
+            status.textContent = "Failed to send message ❌";
+            status.classList.add("error");
+            console.error(error);
+        }
+    );
+});
+
+
+        });
+    </script>
+</body>
+</html>
